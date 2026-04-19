@@ -1,0 +1,21 @@
+{
+	"require" : {
+		"ciikkeer/hx" : "^1.0"
+	},
+	"name" : "ciikkeer/hx.fw",
+	"description" : "Based on the ciikkeer/hx PHP project it aims to create an ultra-lightweight high-performance zero-dependency dynamic property service tree framework",
+	"type" : "project",
+	"license" : "Apache-2.0",
+	"authors" : [{
+			"name" : "BREEZZEER",
+			"email" : "lch1025@qq.com",
+			"role" : "Administrator"
+		}
+	],
+	"support" : {
+		"email" : "lch1025@qq.com"
+	},
+	"keywords" : [
+		"#php #lightweight #high performance #zero dependency #dynamic property service tree #framework"
+	]
+}
