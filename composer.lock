@@ -4,24 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-<<<<<<< HEAD
     "content-hash": "01b398b02b04638e4b51d2d53f790a9f",
-=======
-    "content-hash": "be90b01a049b0740fa18e91dd95ae7d4",
->>>>>>> refs/remotes/origin/main
     "packages": [
         {
             "name": "ciikkeer/hx",
-            "version": "1.0.55",
+            "version": "1.0.56",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CIIKKEER/hx.git",
-                "reference": "5ecc84285dece03e960e230086a78d4a1ebed64b"
+                "reference": "0ed94a0b0444d7578e8274ff5d7c3349047aa306"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/5ecc84285dece03e960e230086a78d4a1ebed64b",
-                "reference": "5ecc84285dece03e960e230086a78d4a1ebed64b",
+                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/0ed94a0b0444d7578e8274ff5d7c3349047aa306",
+                "reference": "0ed94a0b0444d7578e8274ff5d7c3349047aa306",
                 "shasum": ""
             },
             "require": {
@@ -55,9 +51,9 @@
             ],
             "support": {
                 "issues": "https://github.com/CIIKKEER/hx/issues",
-                "source": "https://github.com/CIIKKEER/hx/tree/1.0.55"
+                "source": "https://github.com/CIIKKEER/hx/tree/1.0.56"
             },
-            "time": "2026-04-19T11:33:41+00:00"
+            "time": "2026-04-19T15:10:50+00:00"
         },
         {
             "name": "colinmollenhour/credis",
