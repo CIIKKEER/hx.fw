@@ -4,7 +4,11 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
+<<<<<<< HEAD
     "content-hash": "01b398b02b04638e4b51d2d53f790a9f",
+=======
+    "content-hash": "be90b01a049b0740fa18e91dd95ae7d4",
+>>>>>>> refs/remotes/origin/main
     "packages": [
         {
             "name": "ciikkeer/hx",
