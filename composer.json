@@ -17,5 +17,10 @@
 	},
 	"keywords" : [
 		"#php #lightweight #high performance #zero dependency #dynamic property service tree #framework"
-	]
+	],
+	"autoload" : {
+		"psr-4" : {
+			"appx\\" : "app.x"
+		}
+	}
 }

@@ -1,4 +1,8 @@
 <?php
 require_once __DIR__ . '/../vendor/autoload.php';
 
-gf()->fun->debug->print_r(gf()->version->about());
+/* < go ...
+ * 
+ */
+gf()->route->add_with_array(\appx\route\route::new()->get())->go();
+/* > */

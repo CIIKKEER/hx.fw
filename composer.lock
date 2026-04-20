@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "ciikkeer/hx",
-            "version": "1.0.56",
+            "version": "1.0.57",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CIIKKEER/hx.git",
-                "reference": "0ed94a0b0444d7578e8274ff5d7c3349047aa306"
+                "reference": "64acfe2388b807492b84f11039d8e2184fb62d21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/0ed94a0b0444d7578e8274ff5d7c3349047aa306",
-                "reference": "0ed94a0b0444d7578e8274ff5d7c3349047aa306",
+                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/64acfe2388b807492b84f11039d8e2184fb62d21",
+                "reference": "64acfe2388b807492b84f11039d8e2184fb62d21",
                 "shasum": ""
             },
             "require": {
@@ -31,8 +31,7 @@
                     "src/hx/gf.php"
                 ],
                 "psr-4": {
-                    "hx\\": "src/hx",
-                    "appx\\": "app.x"
+                    "hx\\": "src/hx"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -51,9 +50,9 @@
             ],
             "support": {
                 "issues": "https://github.com/CIIKKEER/hx/issues",
-                "source": "https://github.com/CIIKKEER/hx/tree/1.0.56"
+                "source": "https://github.com/CIIKKEER/hx/tree/1.0.57"
             },
-            "time": "2026-04-19T15:10:50+00:00"
+            "time": "2026-04-20T04:29:11+00:00"
         },
         {
             "name": "colinmollenhour/credis",
