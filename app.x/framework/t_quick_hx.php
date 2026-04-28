@@ -8,7 +8,7 @@ use hx\c_base_class;
 use hx\cache\c_cache;
 use hx\cache\redis\c_redis;
 
-class c_quick_hx extends c_base_class
+trait t_quick_hx
 {
 	protected hx $hx;
 	protected c_db $db;

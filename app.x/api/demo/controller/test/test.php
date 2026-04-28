@@ -10,9 +10,77 @@ use hx\cache\redis\i_redis_type;
 use appx\api\demo\model\m_test;
 use appx\api\demo\model\aaa;
 use appx\framework\c_controller;
+use hx\db\orm\c_orm;
+use appx\api\demo\model\bbb\bbb;
 
 class test extends c_controller
 {
+
+	public function bbb ()
+	{
+		return new class() extends c_base_class
+		{
+
+			public function get_info_by_id ()
+			{
+				return new class() extends c_base_class implements i_route_action_with_invoke
+				{
+
+					public function on_invoke (i_request $r , i_response $s)
+					{
+						
+						return $s->success(bbb::new()->get_info_by_id($r->get('id')));
+					}
+				};
+			}
+
+			public function add ()
+			{
+				return new class() extends c_base_class implements i_route_action_with_invoke
+				{
+
+					public function on_invoke (i_request $r , i_response $s)
+					{
+						return bbb::new()->add($r->raw_body_content()
+							->to_object()
+							->set('user_address','aaaaaaaaaaaaadress.' . gf()->fun->cipher->rand->uuid()
+							->v4())) === true ? $s->success('bbb.add.ok') : $s->error('bbb.add.error');
+					}
+				};
+			}
+		};
+	}
+
+	public function aaa ()
+	{
+		return new class() extends c_controller
+		{
+
+			public function add ()
+			{
+				return new class() extends c_base_class implements i_route_action_with_invoke
+				{
+
+					public function on_invoke (i_request $r , i_response $s)
+					{
+						return $s->success(aaa::new()->add());
+					}
+				};
+			}
+
+			public function get_detail_info ()
+			{
+				return new class() extends c_base_class implements i_route_action_with_invoke
+				{
+
+					public function on_invoke (i_request $r , i_response $s)
+					{
+						return $s->success(aaa::new()->get_detail_info());
+					}
+				};
+			}
+		};
+	}
 
 	public function hx ()
 	{
@@ -86,7 +154,7 @@ class test extends c_controller
 
 					public function on_invoke (i_request $r , i_response $s)
 					{
-						return $s->error(__METHOD__);
+						return $s->success('user.add.ok');
 					}
 				};
 			}
@@ -98,7 +166,7 @@ class test extends c_controller
 
 					public function on_invoke (i_request $r , i_response $s)
 					{
-						return $s->success([ m_test::new()->about(),aaa::new()->about()]);
+						return $s->success(__METHOD__);
 					}
 				};
 			}
