@@ -14,6 +14,7 @@ return 	[
 			
 			'/bbb/add'				=> test::new()->bbb()->add(),
 			'/bbb/get_info_by_id'	=> test::new()->bbb()->get_info_by_id(),
+			'/bbb/get_detail_info'	=> test::new()->bbb()->get_detail_info(...),
 	
 	
 		];

@@ -21,6 +21,10 @@ class test extends c_controller
 		return new class() extends c_base_class
 		{
 
+			public function get_detail_info(i_request $r,i_response $s)
+			{
+				return $s->success(bbb::new()->get_detail_info());
+			}
 			public function get_info_by_id ()
 			{
 				return new class() extends c_base_class implements i_route_action_with_invoke
@@ -119,7 +123,7 @@ class test extends c_controller
 			public function register (i_request $r , i_response $s)
 			{
 				return $s->success($this->hx->fun->jwt->set_key('xxxxxxxxxx11111111116666666666666xxxxxx')
-					->encoder_with_key([ 'aa' => new \stdClass(),1111111111111]));
+					->encoder([ 'aa' => new \stdClass(),1111111111111]));
 			}
 
 			public function login (i_request $r , i_response $s)

@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "ciikkeer/hx",
-            "version": "1.0.68",
+            "version": "1.0.72",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CIIKKEER/hx.git",
-                "reference": "8b21eba194e2903a9ef9d48ac04879e41ef135e3"
+                "reference": "13622a9cb338149b953dde7f09dded2ff588d754"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/8b21eba194e2903a9ef9d48ac04879e41ef135e3",
-                "reference": "8b21eba194e2903a9ef9d48ac04879e41ef135e3",
+                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/13622a9cb338149b953dde7f09dded2ff588d754",
+                "reference": "13622a9cb338149b953dde7f09dded2ff588d754",
                 "shasum": ""
             },
             "require": {
@@ -50,9 +50,9 @@
             ],
             "support": {
                 "issues": "https://github.com/CIIKKEER/hx/issues",
-                "source": "https://github.com/CIIKKEER/hx/tree/1.0.68"
+                "source": "https://github.com/CIIKKEER/hx/tree/1.0.72"
             },
-            "time": "2026-04-28T08:30:37+00:00"
+            "time": "2026-04-30T09:05:02+00:00"
         },
         {
             "name": "colinmollenhour/credis",

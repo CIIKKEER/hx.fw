@@ -10,13 +10,6 @@ use hx\fun\stdclass\c_stdclass;
 class aaa extends c_model
 {
 
-	protected function on_set_open_with_env_json (): string
-	{
-		return __DIR__ . '/../../../../env/env.json';
-	}
-
-	
-
 	public function add (): c_stdclass
 	{
 		return $this->fun->stdclass->new()->set('insert_id',$this->insert()
@@ -32,11 +25,24 @@ class aaa extends c_model
 
 	public function get_detail_info (): c_stdclass
 	{
-		return $this->field()
+		$data = $this->fun->stdclass->new();
+		$this->field()
 			->where()
-			->like('name','jack')
+			->and('name','=','tttt')
+			->and('age','=',1)
+			->and('id','in',[ 15,16,17])
+			->order()
+			->desc('id')
+			->by()
 			->select()
 			->go()
-			->get_single_row();
+			->for_each(function ($k , c_stdclass $v) use ( $data)
+		{
+			$data->set($k,$v);
+		});
+		$data->add('jwt',gf()->fun->jwt->encoder($data->to_array()
+			->get()));
+
+		return $data;
 	}
 }
