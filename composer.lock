@@ -8,20 +8,19 @@
     "packages": [
         {
             "name": "ciikkeer/hx",
-            "version": "1.0.72",
+            "version": "1.0.78",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CIIKKEER/hx.git",
-                "reference": "13622a9cb338149b953dde7f09dded2ff588d754"
+                "reference": "a84795c5b590166346a3a6e4e254788a8a6013d1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/13622a9cb338149b953dde7f09dded2ff588d754",
-                "reference": "13622a9cb338149b953dde7f09dded2ff588d754",
+                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/a84795c5b590166346a3a6e4e254788a8a6013d1",
+                "reference": "a84795c5b590166346a3a6e4e254788a8a6013d1",
                 "shasum": ""
             },
             "require": {
-                "colinmollenhour/credis": "1.17.1",
                 "firebase/php-jwt": "7.0.5",
                 "php": "^8.1"
             },
@@ -36,7 +35,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Apache-2.0"
             ],
             "authors": [
                 {
@@ -50,56 +49,9 @@
             ],
             "support": {
                 "issues": "https://github.com/CIIKKEER/hx/issues",
-                "source": "https://github.com/CIIKKEER/hx/tree/1.0.72"
+                "source": "https://github.com/CIIKKEER/hx/tree/1.0.78"
             },
-            "time": "2026-04-30T09:05:02+00:00"
-        },
-        {
-            "name": "colinmollenhour/credis",
-            "version": "v1.17.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/colinmollenhour/credis.git",
-                "reference": "418f7031f31d1481c3ac19c918348e131bf8d3bf"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/colinmollenhour/credis/zipball/418f7031f31d1481c3ac19c918348e131bf8d3bf",
-                "reference": "418f7031f31d1481c3ac19c918348e131bf8d3bf",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.4.0"
-            },
-            "suggest": {
-                "ext-redis": "Improved performance for communicating with redis"
-            },
-            "type": "library",
-            "autoload": {
-                "classmap": [
-                    "Client.php",
-                    "Cluster.php",
-                    "Sentinel.php",
-                    "Module.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Colin Mollenhour",
-                    "email": "colin@mollenhour.com"
-                }
-            ],
-            "description": "Credis is a lightweight interface to the Redis key-value store which wraps the phpredis library when available for better performance.",
-            "homepage": "https://github.com/colinmollenhour/credis",
-            "support": {
-                "issues": "https://github.com/colinmollenhour/credis/issues",
-                "source": "https://github.com/colinmollenhour/credis/tree/v1.17.1"
-            },
-            "time": "2026-03-03T06:50:28+00:00"
+            "time": "2026-05-07T09:37:19+00:00"
         },
         {
             "name": "firebase/php-jwt",

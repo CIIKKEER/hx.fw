@@ -16,15 +16,28 @@ use appx\api\demo\model\bbb\bbb;
 class test extends c_controller
 {
 
+	public function log ()
+	{
+		return new class() extends c_base_class
+		{
+
+			public function add (i_request $r , i_response $s)
+			{
+				return $s->success(__METHOD__ . '.add.ok');
+			}
+		};
+	}
+
 	public function bbb ()
 	{
 		return new class() extends c_base_class
 		{
 
-			public function get_detail_info(i_request $r,i_response $s)
+			public function get_detail_info (i_request $r , i_response $s)
 			{
 				return $s->success(bbb::new()->get_detail_info());
 			}
+
 			public function get_info_by_id ()
 			{
 				return new class() extends c_base_class implements i_route_action_with_invoke
@@ -32,7 +45,6 @@ class test extends c_controller
 
 					public function on_invoke (i_request $r , i_response $s)
 					{
-						
 						return $s->success(bbb::new()->get_info_by_id($r->get('id')));
 					}
 				};

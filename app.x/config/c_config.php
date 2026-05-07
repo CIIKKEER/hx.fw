@@ -47,5 +47,7 @@ class c_config extends c_base_class
 		 *
 		 >
 		 */
+		
+		
 	}
 }

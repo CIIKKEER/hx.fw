@@ -17,5 +17,8 @@ return 	[
 			'/bbb/get_detail_info'	=> test::new()->bbb()->get_detail_info(...),
 	
 	
+			'/log/add'				=> test::new()->log()->add(...),
+	
+	
 		];
 /* > */

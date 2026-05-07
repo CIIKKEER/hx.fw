@@ -9,7 +9,7 @@ namespace appx\config;
 
 class c_config_kv
 {
-	/* it is a file path that contains the database and Redis configuration information
+	/* it is a file path that contains the MySQL database and Redis configuration information
 	 <
 	 */
 	public const mysql_config_env_file_path 								= __DIR__ . '/../../env/env.json';
@@ -19,7 +19,22 @@ class c_config_kv
 	 */
 	public const jwt_encoder_and_decoder_default_key_string_env_file_path 	= __DIR__ . '/../../env/env.json';
 	
-	/*
+	/* log system environment configuration file path
+	 * 
+	 */
+	public const log_system_environment_configuration_file_path				= __DIR__ . '/../../env/env.config';
+	
+	/* You can continue to define another constant key-value pair here
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
+	 * 
 	 >
 	 */
 }
