@@ -12,12 +12,14 @@ use appx\api\demo\model\aaa;
 use appx\framework\c_controller;
 use hx\db\orm\c_orm;
 use appx\api\demo\model\bbb\bbb;
+use hx\log\e_log_level;
 
 class test extends c_controller
 {
 
 	public function log ()
 	{
+		$this->log->save(e_log_level::info,'bbbbbbbbbbbbbbbbb');
 		return new class() extends c_base_class
 		{
 

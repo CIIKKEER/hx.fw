@@ -18,19 +18,21 @@ use hx\c_base_class;
 use hx\cache\c_cache;
 use hx\cache\redis\c_redis;
 use hx\log\c_log;
+use hx\log\e_log_level;
 use hx\log\e_log_save_mode;
 use appx\config\c_config_kv;
+use hx\log\i_log_save_mode;
 
 /* i have provided some short internal accessible properties to make general calling quicker
  < 
  */
 trait t_quick_hx
 {
-	protected 	hx 		$hx						;
-	protected 	c_db 	$db						;
-	protected 	c_fun 	$fun					;
-	protected 	c_redis $redis					;
-	protected 	c_log 	$log					;
+	protected 	hx 					$hx			;
+	protected 	c_db 				$db			;
+	protected 	c_fun 				$fun		;
+	protected 	c_redis 			$redis		;
+	protected 	i_log_save_mode 	$log		;
 
 	public function __construct ()
 	{
@@ -42,9 +44,29 @@ trait t_quick_hx
 		/* the default log saving mode uses the local file driver.
 		 *  
 		 */
-		$this->log 		= gf()->log->set_log_env_json_file(c_config_kv::log_system_environment_configuration_file_path)->set_log_save_mode(e_log_save_mode::file);
+		$this->log 		= new c_logx()			;
+	}
+}
+
+class c_logx implements i_log_save_mode
+{
+	private c_log $c_log;
+
+	public function __construct ()
+	{
+		$this->c_log = gf()->log->set_log_env_json_file(c_config_kv::log_system_environment_configuration_file_path)->set_log_save_mode(e_log_save_mode::file);
+	}
+
+	public function save (e_log_level $log_level , mixed $data): self
+	{
+		$this->c_log->save($log_level, $data);
+		return $this;
 	}
 }
 /*
  >
  */
+
+
+
+ 
