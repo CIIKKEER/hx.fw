@@ -1,1 +1,6 @@
 [info][2026-05-08 17:25:34] "bbbbbbbbbbbbbbbbb"
+[info][2026-05-09 13:30:26] "appx\\api\\demo\\controller\\test\\test@anonymous\u0000C:\\Users\\Administrator\\eclipse-workspace\\2023\\hx.fw\\app.x\\api\\demo\\controller\\test\\test.php:23$d"
+[info][2026-05-09 13:30:29] "appx\\api\\demo\\controller\\test\\test@anonymous\u0000C:\\Users\\Administrator\\eclipse-workspace\\2023\\hx.fw\\app.x\\api\\demo\\controller\\test\\test.php:23$34"
+[info][2026-05-09 13:31:30] null
+[info][2026-05-09 13:33:10] "aaaaaaaaa"
+[info][2026-05-09 13:33:27] "aaaaaaaaa"

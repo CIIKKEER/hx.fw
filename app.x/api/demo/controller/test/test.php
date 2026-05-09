@@ -13,19 +13,23 @@ use appx\framework\c_controller;
 use hx\db\orm\c_orm;
 use appx\api\demo\model\bbb\bbb;
 use hx\log\e_log_level;
+use hx\fun\stdclass\c_stdclass;
 
 class test extends c_controller
 {
+	protected const aaa= 'aaaaaaaaa';
+	protected c_stdclass $s;
 
 	public function log ()
 	{
-		$this->log->save(e_log_level::info,'bbbbbbbbbbbbbbbbb');
-		return new class() extends c_base_class
+		return new class($this->make_weak_reference()) extends test
 		{
 
 			public function add (i_request $r , i_response $s)
 			{
-				return $s->success(__METHOD__ . '.add.ok');
+			 
+				$this->log->info($this::aaa);
+				return $s->success(__METHOD__ . '.add.ok'.self::aaa);
 			}
 		};
 	}

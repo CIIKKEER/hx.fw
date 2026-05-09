@@ -28,11 +28,11 @@ use hx\log\i_log_save_mode;
  */
 trait t_quick_hx
 {
-	protected 	hx 					$hx			;
-	protected 	c_db 				$db			;
-	protected 	c_fun 				$fun		;
-	protected 	c_redis 			$redis		;
-	protected 	i_log_save_mode 	$log		;
+	public 	hx 					$hx				;
+	public 	c_db 				$db				;
+	public 	c_fun 				$fun			;
+	public 	c_redis 			$redis			;
+	public 	c_logx			 	$log			;
 
 	public function __construct ()
 	{
@@ -48,16 +48,35 @@ trait t_quick_hx
 	}
 }
 
-class c_logx implements i_log_save_mode
+class c_logx  
 {
-	private c_log $c_log;
+	
+	public function warning (mixed $data): self
+	{
+		return $this->save(e_log_level::warning,$data);
+	}
+	
+	public function error (mixed $data): self
+	{
+		return $this->save(e_log_level::error,$data);
+	}
+	
+	public function tips (mixed $data): self
+	{
+		return $this->save(e_log_level::tips,$data);
+	}
+	
+	public function info (mixed $data): self
+	{
+		return $this->save(e_log_level::info,$data);
+	}
 
 	public function __construct ()
 	{
 		$this->c_log = gf()->log->set_log_env_json_file(c_config_kv::log_system_environment_configuration_file_path)->set_log_save_mode(e_log_save_mode::file);
 	}
 
-	public function save (e_log_level $log_level , mixed $data): self
+	private function save (e_log_level $log_level , mixed $data): self
 	{
 		$this->c_log->save($log_level, $data);
 		return $this;

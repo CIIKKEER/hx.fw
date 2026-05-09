@@ -1,7 +1,17 @@
 <?php
+/*
+ <
+ */
+declare(strict_types = 1);
+
+/* Copyright 2026 BREEZZEER
+ * SPDX-License-Identifier: Apache-2.0
+ *
+ >
+ */
 require_once __DIR__ . '/../vendor/autoload.php';
 
-/*< i will initialize the global configuration file of the framework as the first step 
+/* i will initialize the global configuration file of the framework as the first step 
  < 
  */
 \appx\config\c_config::new()->ini();
