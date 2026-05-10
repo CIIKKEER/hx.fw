@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "ciikkeer/hx",
-            "version": "1.0.81",
+            "version": "1.0.83",
             "source": {
                 "type": "git",
                 "url": "https://github.com/CIIKKEER/hx.git",
-                "reference": "77021cedc23fd5cc86ef6e7edc632c18e647dd01"
+                "reference": "1cf292e69f1d6c73735e1cbba84f87982e8bfcc1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/77021cedc23fd5cc86ef6e7edc632c18e647dd01",
-                "reference": "77021cedc23fd5cc86ef6e7edc632c18e647dd01",
+                "url": "https://api.github.com/repos/CIIKKEER/hx/zipball/1cf292e69f1d6c73735e1cbba84f87982e8bfcc1",
+                "reference": "1cf292e69f1d6c73735e1cbba84f87982e8bfcc1",
                 "shasum": ""
             },
             "require": {
@@ -49,9 +49,9 @@
             ],
             "support": {
                 "issues": "https://github.com/CIIKKEER/hx/issues",
-                "source": "https://github.com/CIIKKEER/hx/tree/1.0.81"
+                "source": "https://github.com/CIIKKEER/hx/tree/1.0.83"
             },
-            "time": "2026-05-09T03:51:39+00:00"
+            "time": "2026-05-10T07:21:06+00:00"
         },
         {
             "name": "firebase/php-jwt",

@@ -15,21 +15,30 @@ use appx\api\demo\model\bbb\bbb;
 use hx\log\e_log_level;
 use hx\fun\stdclass\c_stdclass;
 
+class xxx
+{
+	public function __construct(public string $a='') 
+	{
+		;
+	}
+}
 class test extends c_controller
 {
-	protected const aaa= 'aaaaaaaaa';
-	protected c_stdclass $s;
 
+	
+	
 	public function log ()
 	{
-		return new class($this->make_weak_reference()) extends test
+		
+		
+		return new class() extends c_controller
 		{
 
 			public function add (i_request $r , i_response $s)
 			{
-			 
-				$this->log->info($this::aaa);
-				return $s->success(__METHOD__ . '.add.ok'.self::aaa);
+				$this->log->error(__CLASS__);
+				$this->log->info( (new xxx())->a);
+				return $s->success(__METHOD__ . '.add.ok => ' . __CLASS__);
 			}
 		};
 	}
@@ -103,18 +112,7 @@ class test extends c_controller
 			}
 		};
 	}
-
-	public function hx ()
-	{
-		return new class() extends c_controller
-		{
-
-			public function about (i_request $r , i_response $s)
-			{
-				return $s->success(gf()->version->about());
-			}
-		};
-	}
+ 
 
 	public function user ()
 	{

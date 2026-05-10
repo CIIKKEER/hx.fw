@@ -22,54 +22,37 @@ use hx\log\e_log_level;
 use hx\log\e_log_save_mode;
 use appx\config\c_config_kv;
 use hx\log\i_log_save_mode;
+use hx\log\t_log_save_x;
 
 /* i have provided some short internal accessible properties to make general calling quicker
  < 
  */
 trait t_quick_hx
 {
-	public 	hx 					$hx				;
-	public 	c_db 				$db				;
-	public 	c_fun 				$fun			;
-	public 	c_redis 			$redis			;
-	public 	c_logx			 	$log			;
+	protected 	hx 					$hx				;
+	protected 	c_db 				$db				;
+	protected 	c_fun 				$fun			;
+	protected 	c_redis 			$redis			;
+	protected 	c_logx			 	$log			;
 
-	public function __construct ()
+	public function __construct  ()
 	{
-		$this->hx 		= gf()					;
-		$this->db 		= gf()->db				;
-		$this->fun 		= gf()->fun				;
-		$this->redis 	= gf()->cache->redis	;
+		
+		$this->hx 		= gf()						;
+		$this->db 		= $this->hx->db				;
+		$this->fun 		= $this->hx->fun			;
+		$this->redis 	= $this->hx->cache->redis	;
 		
 		/* the default log saving mode uses the local file driver.
 		 *  
 		 */
-		$this->log 		= new c_logx()			;
+		$this->log 		= new c_logx()				;
 	}
 }
 
 class c_logx  
 {
-	
-	public function warning (mixed $data): self
-	{
-		return $this->save(e_log_level::warning,$data);
-	}
-	
-	public function error (mixed $data): self
-	{
-		return $this->save(e_log_level::error,$data);
-	}
-	
-	public function tips (mixed $data): self
-	{
-		return $this->save(e_log_level::tips,$data);
-	}
-	
-	public function info (mixed $data): self
-	{
-		return $this->save(e_log_level::info,$data);
-	}
+	use t_log_save_x;
 
 	public function __construct ()
 	{
@@ -78,6 +61,7 @@ class c_logx
 
 	private function save (e_log_level $log_level , mixed $data): self
 	{
+		
 		$this->c_log->save($log_level, $data);
 		return $this;
 	}

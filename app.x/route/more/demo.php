@@ -5,7 +5,7 @@ use appx\api\demo\controller\test\test;
  * 
  */
 return 	[
-			'/hx/about' 			=> test::new()->hx()->about(...),
+			'/hx/about' 			=> test::new()->hx()->version->about(...),
 			'/user/register'		=> test::new()->user()->register(...),
 			'/user/add'				=> test::new()->user()->add(),
 	
