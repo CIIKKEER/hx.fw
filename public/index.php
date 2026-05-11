@@ -11,8 +11,16 @@ declare(strict_types = 1);
  */
 require_once __DIR__ . '/../vendor/autoload.php';
 
-/* i will initialize the global configuration file of the framework as the first step 
+/* hello everyone, welcome to the ultra-simple ciikkeer/hx.fw framework that is a PHP open-source Composer library based on ciikkeer/hx. The dynamic properties of PHP use standard interface services to access different modules very quickly.
+ * 
+ * 
+ * 
+ * 
  < 
+ */
+
+/* i will initialize the global configuration file of the framework as the first step 
+ * 
  */
 \appx\config\c_config::new()->ini();
 

@@ -24,6 +24,12 @@ class c_config_kv
 	 */
 	public const log_system_environment_configuration_file_path				= __DIR__ . '/../../env/env.config';
 	
+	
+	/* choose your default log driver mode between 'file' and 'db'
+	 * 
+	 */
+	public const log_system_driver_mode										= 'file';
+	
 	/* You can continue to define another constant key-value pair here
 	 * 
 	 * 

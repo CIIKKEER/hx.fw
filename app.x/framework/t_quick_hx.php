@@ -53,15 +53,15 @@ trait t_quick_hx
 class c_logx  
 {
 	use t_log_save_x;
+	private c_log $c_log;
 
 	public function __construct ()
 	{
-		$this->c_log = gf()->log->set_log_env_json_file(c_config_kv::log_system_environment_configuration_file_path)->set_log_save_mode(e_log_save_mode::file);
+		$this->c_log = gf()->log->set_log_env_json_file(c_config_kv::log_system_environment_configuration_file_path)->set_log_save_mode(c_config_kv::log_system_driver_mode==='file'?e_log_save_mode::file:e_log_save_mode::db);
 	}
 
 	private function save (e_log_level $log_level , mixed $data): self
 	{
-		
 		$this->c_log->save($log_level, $data);
 		return $this;
 	}

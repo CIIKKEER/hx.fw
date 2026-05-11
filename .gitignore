@@ -5,3 +5,4 @@
 ghp_*
 vendor/
 /env
+/tmp.x
