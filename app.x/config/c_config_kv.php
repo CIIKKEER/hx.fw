@@ -7,6 +7,10 @@
  */
 namespace appx\config;
 
+use hx\log\c_log;
+use hx\log\c_log_driver_with_db;
+use hx\log\e_log_save_mode;
+
 class c_config_kv
 {
 	/* it is a file path that contains the MySQL database and Redis configuration information
@@ -28,7 +32,7 @@ class c_config_kv
 	/* choose your default log driver mode between 'file' and 'db'
 	 * 
 	 */
-	public const log_system_driver_mode										= 'file';
+	public const log_system_driver_mode										= e_log_save_mode::file;
 	
 	/* You can continue to define another constant key-value pair here
 	 * 
